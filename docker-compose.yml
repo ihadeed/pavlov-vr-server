@@ -1,0 +1,9 @@
+version: '2.3'
+
+services:
+  pavlov:
+    image: ihadeed/pavlov-server:latest
+    volumes:
+    - ./Game.ini:/home/steam/pavlovserver/Pavlov/Saved/Config/LinuxServer/Game.ini
+    ports:
+    - 7500:7500
