@@ -5,8 +5,10 @@ services:
     image: ihadeed/pavlov-server:latest
     volumes:
     - ./Game.ini:/home/steam/pavlovserver/Pavlov/Saved/Config/LinuxServer/Game.ini
+    - ./RconSettings.txt:/home/steam/pavlovserver/Pavlov/Saved/Config/RconSettings.txt
     environment:
     - PORT=7500
     ports:
     - 7500:7500/udp
     - 7901:7901/udp
+    - 15200:15200/tcp
