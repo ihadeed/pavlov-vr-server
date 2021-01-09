@@ -1,7 +1,7 @@
 FROM ubuntu:bionic
 
 RUN apt update -y && \
-  apt install -y gdb curl lib32gcc1 && \
+  apt install -y gdb curl libc++-dev lib32gcc1 && \
   rm -rf /var/lib/apt/lists/*
 RUN useradd -m steam
 WORKDIR /home/steam/Steam
